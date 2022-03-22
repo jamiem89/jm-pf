@@ -1,0 +1,8 @@
+.project-card {
+    width: 47.5%;
+}
+
+.project-card__img {
+    width: 100%;
+    height: auto;
+}

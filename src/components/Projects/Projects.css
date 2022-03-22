@@ -1,0 +1,12 @@
+.projects {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    
+    z-index: 100;
+}

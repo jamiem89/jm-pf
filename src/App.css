@@ -1,0 +1,33 @@
+/* Fonts */
+
+@font-face {
+font-family: "Newake";
+src: url("./fonts/newake-font-webfont.woff2") format("woff2"),
+        url("./fonts/newake-font-webfont.woff") format("woff");
+}
+  
+
+:root {
+    /* Colours */
+    --c-darkest: #050E13;
+    --c-lightest: #FFE1CA;
+    --c-primary: #F9A4C4;
+    --c-secondary: #72B3F1;
+
+    /* Fonts */
+    --f-primary: 'Newake';
+
+    /* Spacing */
+    --global-padding: 1.5rem;
+}
+
+/* Global styles */
+
+body {
+    font-size: 62.5%;
+    font-family: var(--f-primary);
+    letter-spacing: .1rem;
+    overflow-x: hidden;
+    background-color: var(--c-darkest);
+    color: var(--c-lightest);
+}
