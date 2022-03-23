@@ -5,7 +5,14 @@ font-family: "Newake";
 src: url("./fonts/newake-font-webfont.woff2") format("woff2"),
         url("./fonts/newake-font-webfont.woff") format("woff");
 }
-  
+
+
+@font-face {
+    font-family: "Roboto";
+    src: url("./fonts/roboto-light-webfont.woff2") format("woff2"),
+            url("./fonts/roboto-light-webfont.woff") format("woff");
+    }
+
 
 :root {
     /* Colours */
@@ -15,7 +22,8 @@ src: url("./fonts/newake-font-webfont.woff2") format("woff2"),
     --c-secondary: #72B3F1;
 
     /* Fonts */
-    --f-primary: 'Newake';
+    --f-primary: 'Newake', sans-serif;
+    --f-secondary: 'Roboto', sans-serif;
 
     /* Spacing */
     --global-padding: 1.5rem;
@@ -23,11 +31,23 @@ src: url("./fonts/newake-font-webfont.woff2") format("woff2"),
 
 /* Global styles */
 
-body {
+html {
     font-size: 62.5%;
+}
+
+body {
     font-family: var(--f-primary);
     letter-spacing: .1rem;
     overflow-x: hidden;
     background-color: var(--c-darkest);
     color: var(--c-lightest);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--f-primary);
+}
+
+p, a, ul, ol, li {
+    font-family: var(--f-secondary);
+    letter-spacing: 0;
 }

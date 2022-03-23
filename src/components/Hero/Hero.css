@@ -34,11 +34,46 @@
     .home-hero__title {
         width: 100%;
         margin-bottom: 1rem;
-        font-size: clamp(1.6rem, 7rem, 20rem);
+        font-size: 4.6rem;
     }
 
     .home-hero__text {
+        font-family: var(--f-primary);
         color: var(--c-primary);
-        font-size: clamp(1.6rem, 2.2rem, 2.9rem);
+        font-size: 1.9rem;
     }
-    
+
+
+    @media only screen and (min-width: 600px) {
+        .home-hero__title {
+            font-size: 8.4rem;
+        }
+
+        .home-hero__text {
+            font-size: 2.2rem;
+        }
+    }
+
+    @media only screen and (min-width: 960px) {
+        .home-hero::after {
+            height: 50rem;
+            width: 50rem;
+            bottom: -25rem;
+            left: -25rem;
+        }
+
+        .home-hero::before {
+            height: 30rem;
+            width: 30rem;
+            top: -2rem;
+            right: -8rem;
+        }
+
+        .home-hero__title {
+            font-size: 12rem;
+        }
+
+        .home-hero__text {
+            font-size: 2.6rem;
+        }
+    }

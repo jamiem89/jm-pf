@@ -1,21 +1,28 @@
 const ProjectsData = [
     {
         id: 1,
-        title: 'example title',
-        excerpt: 'this is a project description',
-        img: './img/projects/thumb.jpg'
+        title: 'Example title',
+        excerpt: 'This is a project description',
+        img: '/images/card-img.jpg',
+        link: 'http://www.google.com',
     },
     {
         id: 2,
-        title: 'second project',
-        excerpt: 'anther excerpt',
-        img: './img/projects/thumb2.jpg'
+        title: 'Second project',
+        excerpt: 'Another excerpt',
+        img: '/images/card-img-2.jpg'
     },
     {
         id: 3,
-        title: 'one more project',
-        excerpt: 'heres another excerpt',
-        img: './img/projects/thumb3.jpg'
+        title: 'One more project',
+        excerpt: 'Heres another excerpt',
+        img: '/images/card-img-3.jpg'
+    },
+    {
+        id: 3,
+        title: 'One more project',
+        excerpt: 'Heres another excerpt',
+        img: '/images/card-img-3.jpg'
     },
 ];
 
