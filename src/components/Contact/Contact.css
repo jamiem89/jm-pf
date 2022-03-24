@@ -1,0 +1,70 @@
+/* Contact styles to go here */
+
+.contact {
+    position: relative;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.contact__social-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .contact__social-list-item {
+        display: block;
+    }
+
+    .contact__social-list-item:not(:last-child) {
+        margin-right: 2rem;
+    }
+
+    .contact__social-list-item a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        height: 6rem;
+        width: 6rem;
+        border-radius: 100%;
+        overflow: hidden;
+        transition: all .4s ease-in-out;
+    }
+
+    .contact__social-list-item a:hover {
+        transform: scale(1.1);
+    }
+
+    .contact__social-list-item a:before {
+        content: '';
+        position: absolute;
+        height: 300%;
+        width: 300%;
+        left: -150%;
+        bottom: -150%;
+        background: linear-gradient(140deg, var(--c-primary) 0%, var(--c-secondary) 100%);
+        z-index: 1;
+        transition: all .5s ease-in-out;
+    }
+
+    .contact__social-list-item a:hover:before {
+        transform: rotate(90deg);
+    }
+
+    .contact__social-list-item a:hover {background: blue;
+        background: linear-gradient(280deg, var(--c-primary) 0%, var(--c-secondary) 100%);
+    }
+
+    .contact__social-list-item a svg {
+        position: relative;
+        max-height: 2.5rem;
+        height: auto;
+        fill: var(--c-darkest);
+        z-index:2;
+    }
+
+    .contact__social-list-item--github a svg {
+        max-height: 3rem;
+    }
+

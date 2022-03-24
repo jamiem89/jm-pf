@@ -19,7 +19,7 @@ const ProjectsData = [
         img: '/images/card-img-3.jpg'
     },
     {
-        id: 3,
+        id: 4,
         title: 'One more project',
         excerpt: 'Heres another excerpt',
         img: '/images/card-img-3.jpg'
