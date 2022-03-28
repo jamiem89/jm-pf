@@ -1,4 +1,8 @@
 .home-hero {
+
+    --animation-curve: cubic-bezier(.96,-0.01,.99,.61);
+    --animation-curve--rev: cubic-bezier(0,.72,.55,1);
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -8,8 +12,8 @@
     padding: var(--global-padding);
 }
 
-    .home-hero::after,
-    .home-hero::before {
+    .home-hero__circ-bottom,
+    .home-hero__circ-top {
         content: '';
         display: block;
         position: absolute;
@@ -17,30 +21,60 @@
         background: linear-gradient(140deg, var(--c-primary) 0%, var(--c-secondary) 100%);
     }
 
-    .home-hero::after {
-        height: 30rem;
-        width: 30rem;
-        bottom: -15rem;
-        left: -15rem;
-    }
-
-    .home-hero::before {
+    .home-hero__circ-top {
         height: 15rem;
         width: 15rem;
         top: 3rem;
         right: -4rem;
+        transform: translateX(100%);
+        transform: translateY(-100%);
+
+        animation-name: slide-left;
+        animation-fill-mode: forwards;
+        animation-duration: 1.2s;
+        animation-timing-function: var(--animation-curve--rev);
+
+    }
+
+    .home-hero__circ-bottom {
+        height: 30rem;
+        width: 30rem;
+        bottom: -15rem;
+        left: -15rem;
+        transform: translateX(-100%);
+        transform: translateY(100%);
+
+        animation-name: slide-right;
+        animation-fill-mode: forwards;
+        animation-duration: 1s;
+        animation-delay: .6s;
+        animation-timing-function: var(--animation-curve--rev);
     }
 
     .home-hero__title {
         width: 100%;
         margin-bottom: 1rem;
         font-size: 4.6rem;
+        opacity: 0;
+
+        animation-name: fade-in;
+        animation-fill-mode: forwards;
+        animation-duration: 1s;
+        animation-delay: .3s;
+        animation-timing-function: var(--animation-curve--rev);
     }
 
     .home-hero__text {
         font-family: var(--f-primary);
         color: var(--c-primary);
         font-size: 1.9rem;
+        opacity: 0;
+
+        animation-name: fade-in;
+        animation-fill-mode: forwards;
+        animation-duration: 1s;
+        animation-delay: .5s;
+        animation-timing-function: var(--animation-curve--rev);
     }
 
 
@@ -55,14 +89,14 @@
     }
 
     @media only screen and (min-width: 960px) {
-        .home-hero::after {
+        .home-hero__circ-bottom {
             height: 50rem;
             width: 50rem;
             bottom: -25rem;
             left: -25rem;
         }
 
-        .home-hero::before {
+        .home-hero__circ-top {
             height: 30rem;
             width: 30rem;
             top: -2rem;
@@ -77,3 +111,39 @@
             font-size: 2.6rem;
         }
     }
+
+/* Hero animation */
+
+@keyframes slide-left {
+    0% {
+        transform: translateX(100%);
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateX(0rem);
+        transform: translateY(0rem);
+    }
+}
+
+@keyframes slide-right {
+    0% {
+        transform: translateX(-100%);
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateX(0rem);
+        transform: translateY(0rem);
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
