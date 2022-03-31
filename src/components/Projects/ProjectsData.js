@@ -1,29 +1,31 @@
 const ProjectsData = [
     {
         id: 1,
-        title: 'Example title',
-        excerpt: 'This is a project description',
-        img: '/images/card-img.jpg',
-        link: 'http://www.google.com',
+        title: 'Medical Architecture',
+        excerpt: 'Clean modern website for London-based architects. Built on WordPress and utilizing ACF.',
+        img: '/images/medical-architecture.jpg',
+        link: 'https://medicalarchitecture.com',
     },
     {
         id: 2,
-        title: 'Second project',
-        excerpt: 'Another excerpt',
-        img: '/images/card-img-2.jpg'
+        title: 'Transform Festival',
+        excerpt: 'The biggest independent festival of theatre and dance in the UK needed a loud, brash website. Built on WordPress.',
+        img: '/images/transform.jpg',
+        link: 'https://transformfestival.org'
     },
     {
         id: 3,
-        title: 'One more project',
-        excerpt: 'Heres another excerpt',
-        img: '/images/card-img-3.jpg'
+        title: 'The Tetley',
+        excerpt: `The collaborative art space needed a robust architecture solution to make it's large amount of content easily accessible. Built on WordPress, with ACF and GSAP.`,
+        img: '/images/tetley.jpg',
+        link: 'https://thetetley.org/'
     },
     {
         id: 4,
-        title: 'One more project',
-        excerpt: 'Heres another excerpt',
-        img: '/images/card-img-3.jpg'
-    },
+        title: 'North Brewing Co.',
+        excerpt: 'COMING SOON',
+        img: '/images/north-brewing.jpg'
+    }
 ];
 
 export default ProjectsData;

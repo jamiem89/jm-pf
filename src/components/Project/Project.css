@@ -1,4 +1,5 @@
 .project-card {
+    display: block;
     width: 100%;
     background-color: var(--c-darkest);
     color: var(--c-lightest);
@@ -46,12 +47,13 @@
 .project-card__text {
     font-size: 1.6rem;
     line-height: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.8rem;
 }
 
 .project-card__link {
     color: var(--c-lightest);
     font-size: 1.6rem;
+    text-decoration: underline;
 
 }
 
